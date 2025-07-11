@@ -1,0 +1,32 @@
+GET http://localhost:4000/
+###
+
+GET http://localhost:4000/produto
+
+###
+GET http://localhost:4000/produto/2
+
+###
+GET http://localhost:4000/produto?invertido=true
+
+
+###
+POST http://localhost:4000/produto
+Content-Type: application/json
+
+{
+  "nome": "Produto Teste 3",
+  "preco": 100.0
+}
+
+###
+PUT http://localhost:4000/produto/2
+Content-Type: application/json
+
+{
+  "nome": "Produto Teste 2",
+  "preco": 200
+}
+
+###
+DELETE  http://localhost:4000/produto/1
