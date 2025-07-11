@@ -28,6 +28,7 @@ export class ProdutoService {
         }
         return produtoExists;
     }
+
     async update(id: number, data: EditarProdutoDTO) {
         const produtoExists = await this.prisma.produto.findUnique({ where: { id } });
         if (!produtoExists) {

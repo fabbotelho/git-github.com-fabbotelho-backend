@@ -15,17 +15,25 @@ POST http://localhost:4000/produto
 Content-Type: application/json
 
 {
-  "nome": "Produto Teste 3",
-  "preco": 100.0
+  "nome": "Placa de Rede Realtech",
+  "descricao": "Placa de Rede Realtech 4015",
+  "categoria": "placa de rede",
+  "imagem": "/imagens/placas",
+  "estoque": 0,
+  "preco": 45
 }
 
 ###
-PUT http://localhost:4000/produto/2
+PUT http://localhost:4000/produto/3
 Content-Type: application/json
 
 {
-  "nome": "Produto Teste 2",
-  "preco": 200
+  "nome": "asa", 
+  "descricao": "",
+  "categoria": "",
+  "imagem": "", 
+  "estoque": 0,
+  "preco": 0
 }
 
 ###
