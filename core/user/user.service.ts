@@ -16,4 +16,12 @@ export class UserService {
     }
     return await this.prisma.usuario.findMany();
   }
+
+  async findOne(id: number) {
+    const userExists = await this.prisma.usuario.findUnique({ where: { id } });
+    if (!userExists) {
+      throw new Error('Usuário não encontrado!');
+    }
+    return userExists;
+  }
 }

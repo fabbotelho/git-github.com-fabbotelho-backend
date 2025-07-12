@@ -2,3 +2,19 @@ GET http://localhost:4000/
 
 ###
 GET http://localhost:4000/user
+
+###
+GET http://localhost:4000/user/1
+
+###
+POST http://localhost:4000/user
+Content-Type: application/json
+
+{
+  "nome": "PrimeiroUSer",
+  "email": "fabbotelho@gmail.com",
+  "senha": "061172",
+  "ativo": true,
+  "admin": true,
+  "createdAt": "2025-07-11T22:30:00-03:00"
+}

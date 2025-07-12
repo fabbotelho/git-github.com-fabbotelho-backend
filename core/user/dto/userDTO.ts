@@ -1,17 +1,24 @@
-export class UserDTO {
-  //     id        Int      @id @default(autoincrement())
-  //   nome      String
-  //   email     String   @unique
-  //   senha     String
-  //   ativo     Boolean  @default(true)
-  //   admin     Boolean  @default(false)
-  //   createdAt DateTime @default(now())
+import { IsBoolean, IsOptional, IsString } from 'class-validator';
 
+export class UserDTO {
+  @IsOptional()
   id?: number;
+
+  @IsString()
   nome: string;
+
+  @IsString()
   email: string;
+
+  @IsString()
   senha: string;
+
+  @IsBoolean()
   ativo: boolean;
+
+  @IsBoolean()
   admin: boolean;
-  createdAt: Date;
+
+  @IsString()
+  createdAt: string;
 }
