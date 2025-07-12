@@ -1,0 +1,40 @@
+GET http://localhost:4000/
+###
+
+GET http://localhost:4000/produto
+
+###
+GET http://localhost:4000/produto/1
+
+###
+GET http://localhost:4000/produto?invertido=true
+
+
+###
+POST http://localhost:4000/produto
+Content-Type: application/json
+
+{
+  "nome": "Placa de Rede Realtech",
+  "descricao": "Placa de Rede Realtech 4015",
+  "categoria": "placa de rede",
+  "imagem": "/imagens/placas",
+  "estoque": 0,
+  "preco": 45
+}
+
+###
+PUT http://localhost:4000/produto/3
+Content-Type: application/json
+
+{
+  "nome": "asa", 
+  "descricao": "",
+  "categoria": "",
+  "imagem": "", 
+  "estoque": 0,
+  "preco": 0
+}
+
+###
+DELETE  http://localhost:4000/produto/1
